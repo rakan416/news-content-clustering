@@ -1,6 +1,6 @@
-# 📰 IndoNews Cluster: Semantic Topic Modeling
+# 📰 Indonesian News Content Clustering
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![Library](https://img.shields.io/badge/Library-Scikit--Learn%20%7C%20Gensim%20%7C%20Pandas-orange)
 ![Method](https://img.shields.io/badge/Method-Word2Vec%20vs%20TF--IDF-green)
 
@@ -11,7 +11,7 @@ Project ini adalah implementasi *Unsupervised Machine Learning* untuk mengelompo
 
 Fokus utama eksperimen ini adalah membandingkan dua metode ekstraksi fitur:
 1.  **TF-IDF (Term Frequency-Inverse Document Frequency):** Pendekatan statistik klasik.
-2.  **Word2Vec (Pretrained Wikipedia Bahasa Indonesia):** Pendekatan semantik berbasis *embedding*.
+2.  **Word2Vec ([Pretrained Wikipedia Bahasa Indonesia](https://github.com/deryrahman/word2vec-bahasa-indonesia)):** Pendekatan semantik berbasis *embedding*.
 
 Hasilnya menunjukkan bahwa pendekatan semantik (Word2Vec) mampu menangkap konteks topik jauh lebih baik dibandingkan pendekatan leksikal (TF-IDF), memisahkan topik spesifik seperti "Wabah PMK", "Kriminalitas", hingga "Gadget" dengan akurasi yang lebih tinggi.
 
@@ -29,7 +29,7 @@ Perbandingan kualitas cluster berdasarkan *Silhouette Score*:
 
 | Metode | Silhouette Score | Interpretasi |
 | :--- | :--- | :--- |
-| **TF-IDF** | `0.030` | **High Noise:** Banyak tumpang tindih, topik tercampur aduk. |
+| **TF-IDF** | `0.030` | **High Noise:** Banyak berita tercampur |
 | **Word2Vec (Wiki-ID)** | `0.157` | **Structured:** Peningkatan **5x lipat**! Cluster terbentuk berdasarkan konteks makna, bukan sekadar kata kunci. |
 
 ## 🚀 Potensi Implementasi
@@ -44,7 +44,7 @@ Pastikan Anda memiliki Python yang terinstall di komputer Anda dan ipykernel unt
 
 1.  **Clone Repository**
     ```bash
-    git clone [https://github.com/rakan416/news-content-clustering.git](https://github.com/rakan416/news-content-clustering.git)
+    git clone https://github.com/rakan416/news-content-clustering.git
     cd news-content-clustering
     ```
 
@@ -52,7 +52,7 @@ Pastikan Anda memiliki Python yang terinstall di komputer Anda dan ipykernel unt
     ```bash
     pip install pandas numpy scikit-learn gensim nltk matplotlib seaborn
     ```
-    *(Pastikan Anda juga mendownload model Word2Vec pretrained dari github [Dery Rahman](https://github.com/deryrahman/word2vec-bahasa-indonesia))*
+    *(Pastikan Anda juga mendownload model Word2Vec pretrained dari github [Dery Rahman](https://github.com/deryrahman/word2vec-bahasa-indonesia) model dengan panjang vector 100)*
 
 3.  **Run the Notebook**
     Buka file Jupyter Notebook utama:
